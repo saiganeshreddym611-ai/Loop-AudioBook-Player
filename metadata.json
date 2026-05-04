@@ -1,0 +1,6 @@
+{
+  "name": "Looper Player",
+  "description": "A local audio player that repeats files X times with Y seconds gap.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
