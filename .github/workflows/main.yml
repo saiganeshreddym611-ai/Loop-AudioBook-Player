@@ -5,21 +5,24 @@ on:
   push:
     branches:
       - main
-
 jobs:
   build:
-    runs-on: ubuntu-latest # It runs on a cloud version of Ubuntu, just like yours!
+    runs-on: ubuntu-latest
+    # This force-enables the new engine early to clear warnings
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true 
 
     steps:
-      # 1. Pull your code from the repo into the virtual machine
-      - uses: actions/checkout@v4
+      # 1. Updated to v6
+      - uses: actions/checkout@v6
 
-      # 2. Set up Java (required for Android)
+      # 2. Updated to v5
       - name: Set up JDK
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v5
         with:
           java-version: '17'
           distribution: 'temurin'
+      
 
       # 3. Install Flutter
       - name: Set up Flutter
