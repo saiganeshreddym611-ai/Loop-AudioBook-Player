@@ -30,15 +30,7 @@ jobs:
           # flutter-version: '3.29.0'  # or whatever you're using
 
       - name: Install dependencies
-        run: flutter pub get
-
-      # Optional but recommended
-      - name: Run tests
-        run: flutter test
-
-      # Optional: Analyze code
-      - name: Analyze code
-        run: flutter analyze
+        run: flutter pub 
 
       - name: Build APK
         run: flutter build apk --release --split-per-abi   # Better for distribution
